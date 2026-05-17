@@ -15,7 +15,8 @@ const repoUrl = process.env.DOCUSAURUS_REPO_URL;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: siteName,
-  tagline: 'Documentation site built with Docusaurus and deployed on Cloudflare Pages',
+  tagline:
+    'A personal knowledge site for Entra ID field notes, multilingual learning, and durable working knowledge.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -86,9 +87,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Writing', position: 'left'},
           ...(repoUrl
             ? [
                 {
@@ -101,13 +102,12 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Start here',
                 to: '/docs/intro',
               },
             ],
@@ -133,7 +133,7 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'Writing',
                 to: '/blog',
               },
               ...(repoUrl

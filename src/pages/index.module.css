@@ -1,23 +1,267 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.hero {
   position: relative;
   overflow: hidden;
+  padding: 4.5rem 0 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(0, 120, 212, 0.14), transparent 36%),
+    linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
+}
+
+.heroGrid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.85fr);
+  align-items: stretch;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow,
+.sectionEyebrow,
+.cardEyebrow,
+.panelLabel {
+  margin: 0 0 0.75rem;
+  color: #0f62a5;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin: 0;
+  max-width: 11ch;
+  color: #18253d;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.heroSubtitle {
+  max-width: 44rem;
+  margin: 1.25rem 0 0;
+  color: #41526d;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+}
+
+.heroPanel {
+  padding: 1.5rem;
+  border: 1px solid rgba(24, 37, 61, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 24px 60px rgba(17, 40, 73, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.panelTitle {
+  margin: 0;
+  color: #18253d;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.panelText {
+  margin: 1rem 0 0;
+  color: #52627c;
+  line-height: 1.7;
+}
+
+.panelTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.panelTags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(15, 98, 165, 0.12);
+  border-radius: 999px;
+  background: #eff6fd;
+  color: #0f62a5;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.section,
+.sectionAlt {
+  padding: 4rem 0;
+}
+
+.sectionAlt {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.sectionHeader,
+.learningGrid,
+.principles {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #18253d;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.sectionLead {
+  margin: 0;
+  color: #52627c;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.topicGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.topicCard,
+.guideCard {
+  display: block;
+  padding: 1.4rem;
+  border: 1px solid rgba(24, 37, 61, 0.08);
+  border-radius: 22px;
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 16px 40px rgba(19, 41, 75, 0.06);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.topicCard:hover,
+.topicCard:focus,
+.guideCard:hover,
+.guideCard:focus {
+  border-color: rgba(15, 98, 165, 0.24);
+  box-shadow: 0 24px 50px rgba(19, 41, 75, 0.1);
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+
+.cardTitle,
+.guideTitle {
+  margin: 0;
+  color: #18253d;
+  font-size: 1.35rem;
+}
+
+.cardDescription,
+.guideDescription {
+  margin: 0.85rem 0 0;
+  color: #52627c;
+  line-height: 1.7;
+}
+
+.cardLink {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: #0f62a5;
+  font-weight: 700;
+}
+
+.guideList {
+  display: grid;
+  gap: 1rem;
+}
+
+.principleList {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.principleItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(24, 37, 61, 0.08);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 14px 32px rgba(19, 41, 75, 0.05);
+}
+
+.principleItem p {
+  margin: 0;
+  color: #32425a;
+  line-height: 1.7;
+}
+
+.principleMarker {
+  display: inline-flex;
+  min-width: 2.4rem;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  border-radius: 999px;
+  background: #eff6fd;
+  color: #0f62a5;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .hero {
+    padding: 3.25rem 0 2.5rem;
+  }
+
+  .heroGrid,
+  .sectionHeader,
+  .learningGrid,
+  .principles,
+  .topicGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTitle {
+    max-width: none;
+  }
+
+  .section,
+  .sectionAlt {
+    padding: 3rem 0;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 640px) {
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .heroActions :global(.button) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .heroPanel,
+  .topicCard,
+  .guideCard,
+  .principleItem {
+    padding: 1.15rem;
+    border-radius: 18px;
+  }
 }

@@ -2,46 +2,50 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This site is my personal knowledge base for two kinds of work that keep compounding over time:
 
-## Getting Started
+- technical field notes, especially around **Microsoft Entra ID**
+- long-term learning notes across **Chinese, Japanese, English, and Spanish**
 
-Get started by **creating a new site**.
+It is designed to be practical first. That means the goal is not to publish perfect articles every time. The goal is to capture useful thinking clearly enough that I can return to it later and keep building on it.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## What you will find here
 
-### What you'll need
+### Entra ID
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- identity architecture notes
+- access and tenant operations
+- troubleshooting patterns
+- reusable admin guidance
 
-## Generate a new site
+### Languages
 
-Generate a new Docusaurus site using the **classic template**.
+- study systems and habits
+- comparisons between languages
+- vocabulary, grammar, and learning notes
+- progress logs for Spanish
 
-The classic template will automatically be added to your project after you run the command:
+### Workflows
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- repeatable ways of learning and documenting
+- operational playbooks
+- note-taking and review systems
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Projects
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+- implementation notes
+- retrospectives
+- lessons from shipping and maintaining things
 
-## Start your site
+## Why this structure
 
-Run the development server:
+This structure keeps the site close to real work and real learning. It also leaves plenty of room to expand without losing clarity.
 
-```bash
-cd my-website
-npm run start
-```
+If you are new here, the best place to start is:
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- [Entra ID Overview](./entra-id/overview.md)
+- [Language Learning Overview](./languages/overview.md)
+- [Workflow Principles](./workflows/overview.md)
+- [Project Notes](./projects/overview.md)

@@ -1,30 +1,166 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #0f6cbd;
+  --ifm-color-primary-dark: #0d60a8;
+  --ifm-color-primary-darker: #0c5a9f;
+  --ifm-color-primary-darkest: #094a83;
+  --ifm-color-primary-light: #1278d2;
+  --ifm-color-primary-lighter: #1d81d8;
+  --ifm-color-primary-lightest: #4298de;
+  --ifm-background-color: #f7f9fc;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #25364d;
+  --ifm-heading-color: #18253d;
+  --ifm-navbar-background-color: rgba(247, 249, 252, 0.88);
+  --ifm-navbar-link-color: #32425a;
+  --ifm-navbar-link-hover-color: #0f6cbd;
+  --ifm-footer-background-color: #eef3f8;
+  --ifm-footer-color: #4a5c75;
+  --ifm-footer-link-color: #32425a;
+  --ifm-footer-title-color: #18253d;
+  --ifm-card-background-color: #ffffff;
+  --ifm-code-font-size: 94%;
+  --ifm-global-radius: 18px;
+  --ifm-button-border-radius: 999px;
+  --ifm-leading: 1.75;
+  --ifm-spacing-horizontal: 1rem;
+  --ifm-h1-font-size: 3rem;
+  --ifm-h2-font-size: 2.25rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-family-base:
+    'Segoe UI', 'Aptos', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-font-family-monospace:
+    'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --ifm-code-background: #eef4fb;
+  --ifm-toc-border-color: rgba(24, 37, 61, 0.08);
+  --ifm-hr-border-color: rgba(24, 37, 61, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(15, 108, 189, 0.09);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #67b7ff;
+  --ifm-color-primary-dark: #4caafe;
+  --ifm-color-primary-darker: #3ea3fe;
+  --ifm-color-primary-darkest: #0c8dfd;
+  --ifm-color-primary-light: #82c4ff;
+  --ifm-color-primary-lighter: #90cbff;
+  --ifm-color-primary-lightest: #b9e0ff;
+  --ifm-background-color: #0f1724;
+  --ifm-background-surface-color: #162132;
+  --ifm-font-color-base: #d6deeb;
+  --ifm-heading-color: #f4f7fb;
+  --ifm-navbar-background-color: rgba(15, 23, 36, 0.88);
+  --ifm-navbar-link-color: #d6deeb;
+  --ifm-footer-background-color: #0d1522;
+  --ifm-footer-color: #a7b7cf;
+  --ifm-footer-link-color: #d6deeb;
+  --ifm-footer-title-color: #f4f7fb;
+  --ifm-card-background-color: #162132;
+  --ifm-code-background: rgba(144, 203, 255, 0.12);
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.08);
+  --ifm-hr-border-color: rgba(255, 255, 255, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(103, 183, 255, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(15, 108, 189, 0.08), transparent 24%),
+    var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(24, 37, 61, 0.08);
+  box-shadow: 0 12px 30px rgba(19, 41, 75, 0.04);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.button {
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #0f6cbd 0%, #115ea3 100%);
+  border: none;
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #115ea3 0%, #0f548c 100%);
+}
+
+.button--secondary {
+  border-color: rgba(24, 37, 61, 0.12);
+  background: #ffffff;
+  color: #18253d;
+}
+
+[data-theme='dark'] .button--secondary {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #162132;
+  color: #f4f7fb;
+}
+
+.card,
+.theme-doc-sidebar-item-link,
+.menu__link,
+.pagination-nav__link,
+.table-of-contents {
+  border-radius: var(--ifm-global-radius);
+}
+
+.footer {
+  border-top: 1px solid rgba(24, 37, 61, 0.08);
+}
+
+[data-theme='dark'] .footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.theme-doc-markdown header + * {
+  margin-top: 1.25rem;
+}
+
+.theme-doc-sidebar-container {
+  border-right-color: rgba(24, 37, 61, 0.08);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+.menu__link--active,
+.table-of-contents__link--active {
+  font-weight: 700;
+}
+
+.theme-code-block,
+pre {
+  border: 1px solid rgba(24, 37, 61, 0.08);
+  box-shadow: 0 12px 30px rgba(19, 41, 75, 0.05);
+}
+
+[data-theme='dark'] .theme-code-block,
+[data-theme='dark'] pre {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-h1-font-size: 2.5rem;
+    --ifm-h2-font-size: 2rem;
+  }
 }
